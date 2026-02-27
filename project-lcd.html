@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แสดงผลจอ LCD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>แสดงผลจอ LCD</h1>
+        <nav>
+            <a href="index.html">← กลับไปหน้าโปรเจค</a>
+        </nav>
+    </header>
+
+    <section class="section">
+
+        <h2>โค้ดสมบูรณ์</h2>
+
+        <pre>
+#include &lt;Wire.h&gt;
+#include &lt;LiquidCrystal_I2C.h&gt;
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+void setup() {
+  lcd.init();
+  lcd.backlight();
+
+  lcd.setCursor(0, 0);
+  lcd.print("Arduino วัยรุ่น");
+
+  lcd.setCursor(0, 1);
+  lcd.print("Hello LCD 16x2");
+}
+
+void loop() {
+}
+</pre>
+
+    </section>
+
+    <footer>
+        © 2026 Arduino วัยรุ่น
+    </footer>
+
+</body>
+
+</html>

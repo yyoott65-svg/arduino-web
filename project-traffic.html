@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบไฟจราจร</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>ระบบไฟจราจร</h1>
+        <nav>
+            <a href="index.html">← กลับไปหน้าโปรเจค</a>
+        </nav>
+    </header>
+
+    <section class="section">
+
+        <h2>โค้ดสมบูรณ์</h2>
+
+        <pre>
+const int redPin = 8;
+const int yellowPin = 9;
+const int greenPin = 10;
+
+void setup() {
+  pinMode(redPin, OUTPUT);
+  pinMode(yellowPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+}
+
+void loop() {
+
+  digitalWrite(greenPin, HIGH);
+  digitalWrite(yellowPin, LOW);
+  digitalWrite(redPin, LOW);
+  delay(5000);
+
+  digitalWrite(greenPin, LOW);
+  digitalWrite(yellowPin, HIGH);
+  delay(2000);
+
+  digitalWrite(yellowPin, LOW);
+  digitalWrite(redPin, HIGH);
+  delay(5000);
+}
+</pre>
+
+    </section>
+
+    <footer>
+        © 2026 Arduino วัยรุ่น
+    </footer>
+
+</body>
+
+</html>

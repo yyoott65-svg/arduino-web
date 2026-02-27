@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHT11 วัดอุณหภูมิ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>โปรเจค: วัดอุณหภูมิ DHT11</h1>
+        <nav>
+            <a href="index.html">หน้าแรก</a>
+            <a href="projects.html">โปรเจคทั้งหมด</a>
+        </nav>
+    </header>
+
+    <section class="section">
+
+        <h2>หลักการทำงาน</h2>
+        <p>อ่านค่าอุณหภูมิจากเซ็นเซอร์ DHT11 แล้วแสดงผลผ่าน Serial Monitor</p>
+
+        <h2>โค้ดสมบูรณ์</h2>
+
+        <pre>
+#include "DHT.h"
+
+#define DHTPIN 2
+#define DHTTYPE DHT11
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(9600);
+  dht.begin();
+}
+
+void loop() {
+  float temp = dht.readTemperature();
+  Serial.print("Temperature: ");
+  Serial.print(temp);
+  Serial.println(" °C");
+  delay(2000);
+}
+</pre>
+
+    </section>
+
+    <footer>© 2026 Arduino วัยรุ่น</footer>
+
+</body>
+
+</html>

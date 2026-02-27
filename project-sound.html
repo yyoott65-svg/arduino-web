@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เปิดไฟด้วยเสียง</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>เปิดไฟด้วยเสียง</h1>
+        <nav>
+            <a href="projects.html">← กลับไปหน้าโปรเจค</a>
+        </nav>
+    </header>
+
+    <section class="section">
+
+        <h2>โค้ดสมบูรณ์</h2>
+
+        <pre>
+const int soundPin = 2;
+const int ledPin = 13;
+
+void setup() {
+  pinMode(soundPin, INPUT);
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  int soundState = digitalRead(soundPin);
+
+  if (soundState == HIGH) {
+    digitalWrite(ledPin, HIGH);
+    delay(500);
+    digitalWrite(ledPin, LOW);
+  }
+}
+</pre>
+
+    </section>
+
+    <footer>© 2026 Arduino วัยรุ่น</footer>
+
+</body>
+
+</html>
